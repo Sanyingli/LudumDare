@@ -84,6 +84,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CustomerShip.cs" />
+    <Compile Include="Assets\Scripts\DrawLine.cs" />
+    <Compile Include="Assets\Scripts\GM.cs" />
     <Compile Include="Assets\Scripts\GUIInfo.cs" />
     <Compile Include="Assets\Scripts\JuiceCaculator.cs" />
     <Compile Include="Assets\Scripts\JuiceGM.cs" />
@@ -91,6 +94,8 @@
     <Compile Include="Assets\Scripts\JuiceTimer.cs" />
     <Compile Include="Assets\Scripts\ShipCtrl.cs" />
     <Compile Include="Assets\Scripts\ShipMagnet.cs" />
+    <Compile Include="Assets\Scripts\ShipPark.cs" />
+    <Compile Include="Assets\Scripts\Station.cs" />
     <Compile Include="Assets\Scripts\Stone.cs" />
     <Compile Include="Assets\Scripts\StoneMaker.cs" />
   </ItemGroup>

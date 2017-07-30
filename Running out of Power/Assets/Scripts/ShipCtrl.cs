@@ -18,7 +18,7 @@ public class ShipCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space")&&SpotLight!= null)
         {
             if (!lightOn)
             {

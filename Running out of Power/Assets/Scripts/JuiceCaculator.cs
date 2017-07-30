@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class JuiceCaculator : MonoBehaviour {
 
     public Text greenNum;
@@ -10,6 +12,7 @@ public class JuiceCaculator : MonoBehaviour {
     public Text greenValue;
     public Text redValue;
     public Text blueValue;
+    public Text parkInfo;
     public Text totalValueText;
     int totalValue;
 
@@ -30,7 +33,27 @@ public class JuiceCaculator : MonoBehaviour {
 
         totalValue = JuiceGM.greenStoneCount * 10 + JuiceGM.redStoneCount * 20 + JuiceGM.blueStoneCount * 50;
 
-        totalValueText.text = "total power: "+ totalValue;
+        totalValueText.text = "Total power: "+ totalValue;
 
+        if (JuiceGM.shipParked)
+        {
+            parkInfo.text = "Ship parked";
+        }
+        else
+        {
+            parkInfo.text = "Ship not parked";
+        }
+
+    }
+
+    public void BackToStationButton()
+    {
+        GM.power += totalValue;
+        if (JuiceGM.shipParked)
+        {
+            GM.shipNum += 1;
+        }
+
+        SceneManager.LoadScene(1);
     }
 }
