@@ -10,7 +10,7 @@ public class Station : MonoBehaviour {
     public Transform landingPoint;
 
     public float movementSpeed = 100;
-    bool gasAddable = false;
+    public bool gasAddable = false;
 
     float lastTime;
     float GenerateTime = 5;
@@ -30,6 +30,7 @@ public class Station : MonoBehaviour {
         }
         else
         {
+            PowerHole.GetComponent<AddGas>().playerEnter = false;
             PowerHole.SetActive(false);
         }
 
@@ -38,15 +39,18 @@ public class Station : MonoBehaviour {
             Debug.Log("test");
             CreatCustomer();
             lastTime = Time.time;
-            GenerateTime = Random.Range(8, 15);
+            GenerateTime = Random.Range(15, 40);
         }
 	}
 
     void CreatCustomer()
     {
-        int i = Random.Range(0, ships.Length);
+        int i = Random.Range(0, ships.Length + 1);
         GameObject _ship = ships[i];
         _ship.GetComponent<CustomerShip>().GoPoint = landingPoint;
+        _ship.GetComponent<CustomerShip>().awayPoint = startPoint;
+        _ship.GetComponent<CustomerShip>().station = this.gameObject;
         Instantiate(_ship, startPoint.position,startPoint.rotation);
     }
+
 }

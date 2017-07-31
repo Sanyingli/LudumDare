@@ -6,12 +6,13 @@ public class GM : MonoBehaviour {
 
     static GM instance;
 
-    public static int power;
-    public static int shipNum;
+    public static int power = 100;
+    public static int shipNum = 3;
     public static int money;
 
     // Use this for initialization
     void Start () {
+
         if (instance == null)
         {
             instance = this;

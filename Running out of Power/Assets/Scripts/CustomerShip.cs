@@ -7,6 +7,14 @@ public class CustomerShip : MonoBehaviour {
     Rigidbody2D rg;
     public float movementSpeed;
     public Transform GoPoint;
+    public Transform awayPoint;
+    public GameObject station;
+
+    public float parkTime;
+    public float lastTime;
+    public int timeLeft;
+
+    bool startCount = false;
 
     // Use this for initialization
     void Start () {
@@ -15,24 +23,48 @@ public class CustomerShip : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	}
-
-    public void MoveToShip(Transform _ship)
-    {
-        if(Vector3.Distance(_ship.position , transform.position) > 0.1)
+        if (!startCount)
         {
-            Vector3 direction = (_ship.position - transform.position).normalized;
+            lastTime = Time.time;
+        }
+
+        timer();
+
+    }
+
+    public void MoveToStation(Transform _station)
+    {
+        if(Vector3.Distance(_station.position , transform.position) > 0.1)
+        {
+            Vector3 direction = (_station.position - transform.position).normalized;
             rg.MovePosition(transform.position + direction * movementSpeed * Time.deltaTime);
+            station.GetComponent<Station>().gasAddable = false;
         }
         else
         {
-            //start count;
+            station.GetComponent<Station>().gasAddable = true;
+            startCount = true;
         }
-
     }
 
     private void FixedUpdate()
     {
-        MoveToShip(GoPoint);
+        MoveToStation(GoPoint);
+    }
+
+    void FlyAway()
+    {
+        GoPoint = awayPoint;
+        station.GetComponent<Station>().gasAddable = false;
+    }
+
+    void timer()
+    {
+        timeLeft = (int)(parkTime - (Time.time - lastTime));
+        if (Time.time - lastTime > parkTime)
+        {
+            FlyAway();
+            Destroy(this.gameObject, 5f);
+        }
     }
 }

@@ -27,11 +27,11 @@ public class JuiceCaculator : MonoBehaviour {
         redNum.text = JuiceGM.redStoneCount.ToString();
         blueNum.text = JuiceGM.blueStoneCount.ToString();
 
-        greenValue.text = (JuiceGM.greenStoneCount*10).ToString();
-        redValue.text = (JuiceGM.redStoneCount*20).ToString();
-        blueValue.text = (JuiceGM.blueStoneCount*50).ToString();
+        greenValue.text = (JuiceGM.greenStoneCount*3).ToString();
+        redValue.text = (JuiceGM.redStoneCount*5).ToString();
+        blueValue.text = (JuiceGM.blueStoneCount*10).ToString();
 
-        totalValue = JuiceGM.greenStoneCount * 10 + JuiceGM.redStoneCount * 20 + JuiceGM.blueStoneCount * 50;
+        totalValue = JuiceGM.greenStoneCount * 3 + JuiceGM.redStoneCount * 5 + JuiceGM.blueStoneCount * 10;
 
         totalValueText.text = "Total power: "+ totalValue;
 

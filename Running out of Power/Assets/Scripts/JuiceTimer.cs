@@ -14,6 +14,7 @@ public class JuiceTimer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        timeLimit += Time.time;
         timeLeft = timeLimit;
         caculatorPanel.SetActive(false);
 	}

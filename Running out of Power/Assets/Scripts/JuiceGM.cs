@@ -12,6 +12,9 @@ public class JuiceGM : MonoBehaviour {
     // Use this for initialization
     void Start () {
         shipParked = false;
+        greenStoneCount = 0;
+        redStoneCount = 0;
+        blueStoneCount = 0;
 
     }
 	
