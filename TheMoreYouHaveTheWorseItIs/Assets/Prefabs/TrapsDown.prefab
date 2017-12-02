@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4470677575436330}
   - component: {fileID: 212714460790950212}
   - component: {fileID: 60423174680794262}
+  - component: {fileID: 114272828281741600}
   m_Layer: 0
   m_Name: TrapsDown
   m_TagString: Untagged
@@ -78,6 +79,17 @@ PolygonCollider2D:
       - {x: 0.095, y: -0.24499999}
       - {x: 0.21499999, y: 0.21499999}
       - {x: 0.515, y: 0.325}
+--- !u!114 &114272828281741600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1695173033646312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4483796dd5437434081f0d4b76d2a161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212714460790950212
 SpriteRenderer:
   m_ObjectHideFlags: 1

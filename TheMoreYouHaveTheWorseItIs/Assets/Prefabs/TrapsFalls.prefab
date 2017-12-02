@@ -27,23 +27,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1391138381319270
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4104495946916306}
-  - component: {fileID: 61391140074814612}
-  - component: {fileID: 114467591559743958}
-  m_Layer: 0
-  m_Name: TrapZone
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1500745564592036
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,8 +38,26 @@ GameObject:
   - component: {fileID: 212407843154955122}
   - component: {fileID: 60066859695153954}
   - component: {fileID: 50344620766280768}
+  - component: {fileID: 114178912511775816}
   m_Layer: 0
   m_Name: TrapsFalls2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1550370394150156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4535864241022084}
+  - component: {fileID: 61436254441895464}
+  - component: {fileID: 114759275223582386}
+  m_Layer: 0
+  m_Name: TrapZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,19 +91,6 @@ Transform:
   m_Father: {fileID: 4415234690596702}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4104495946916306
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1391138381319270}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.635, y: -0.91, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4415234690596702}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4415234690596702
 Transform:
   m_ObjectHideFlags: 1
@@ -115,7 +103,7 @@ Transform:
   m_Children:
   - {fileID: 4501118179578674}
   - {fileID: 4009804872655870}
-  - {fileID: 4104495946916306}
+  - {fileID: 4535864241022084}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -131,6 +119,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4415234690596702}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4535864241022084
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1550370394150156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.635, y: -0.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4415234690596702}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50344620766280768
 Rigidbody2D:
@@ -184,19 +185,19 @@ PolygonCollider2D:
       - {x: 0.036280155, y: -0.11434525}
       - {x: 0.059107304, y: 0.037068456}
       - {x: 0.11, y: 0.24}
---- !u!61 &61391140074814612
+--- !u!61 &61436254441895464
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1391138381319270}
+  m_GameObject: {fileID: 1550370394150156}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06818032, y: 0.18356264}
+  m_Offset: {x: 0.4174266, y: 0.18356264}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -207,20 +208,33 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.86363935, y: 1.870611}
+  m_Size: {x: 0.37803173, y: 1.870611}
   m_EdgeRadius: 0
---- !u!114 &114467591559743958
+--- !u!114 &114178912511775816
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1391138381319270}
+  m_GameObject: {fileID: 1500745564592036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4483796dd5437434081f0d4b76d2a161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114759275223582386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1550370394150156}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db32c679f1463e14e931a6701212aeec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   trapFall: {fileID: 1500745564592036}
+  fruits: []
+  isFallingTrap: 1
 --- !u!212 &212407843154955122
 SpriteRenderer:
   m_ObjectHideFlags: 1
