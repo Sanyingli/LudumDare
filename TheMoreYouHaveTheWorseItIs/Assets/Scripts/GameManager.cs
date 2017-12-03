@@ -17,8 +17,13 @@ public class GameManager : MonoBehaviour {
     public bool hurtable = true;
     float lastTime = 0;
 
+    public GameObject gameOverPanel;
+
     // Use this for initialization
     void Start () {
+        Time.timeScale = 1;
+        gameOverPanel.SetActive(false);
+
         playerCtrl = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCtrl>();
 
         instace = this;
@@ -60,15 +65,17 @@ public class GameManager : MonoBehaviour {
         {
             lastTime = Time.time;
             health -= 1;
+            hurtable = false;
+            playerCtrl.stages[stages].GetComponent<Animator>().SetBool("hurtable", hurtable);
             GUI.instance.CheckHeart(health);
             if (health <= 0)
             {
                 Debug.Log("game over");
-                //GameOver();
+                playerCtrl.enabled = false;
+                Invoke("GameOver", 1f);
             }
             else
             {
-                hurtable = false;
                 Debug.Log("GetHurt() call");
                 StartCoroutine(UnHurtable());
             }
@@ -78,6 +85,12 @@ public class GameManager : MonoBehaviour {
     {
         yield return new WaitForSeconds(2f);
         hurtable = true;
-        playerCtrl.stages[stages].GetComponent<SpriteRenderer>().enabled = true;    
+        playerCtrl.stages[stages].GetComponent<Animator>().SetBool("hurtable", hurtable);
+    }
+
+    void GameOver()
+    {
+        Time.timeScale = 0;
+        gameOverPanel.SetActive(true);
     }
 }

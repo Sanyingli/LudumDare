@@ -36,11 +36,6 @@ public class PlayerCtrl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(!GameManager.instace.hurtable)
-        {
-            stages[GameManager.instace.stages].GetComponent<SpriteRenderer>().enabled = !stages[GameManager.instace.stages].GetComponent<SpriteRenderer>().enabled;
-        }
-
         if (Input.GetButtonUp("Fire1"))
         {
             if (Time.time - lastTime >= jumpCD)

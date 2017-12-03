@@ -65,7 +65,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1848389673081336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.273, y: 0.254, z: 0}
+  m_LocalPosition: {x: 10.249, y: -3.568, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4568140221924198}
@@ -84,7 +84,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.4524758, y: -0.5589409}
+  m_Offset: {x: -0.28068876, y: -0.48949528}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -95,7 +95,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2053246, y: 1.980998}
+  m_Size: {x: 1.6366186, y: 1.8421068}
   m_EdgeRadius: 0
 --- !u!82 &82221105261925520
 AudioSource:
@@ -192,6 +192,9 @@ MonoBehaviour:
   fruits:
   - {fileID: 1798089144067268, guid: 426a58227b5f4ca4d855f0be973a9075, type: 2}
   - {fileID: 1162734131292542, guid: 6c2dc4bcb842fa74d99aac9a4b7a058a, type: 2}
+  - {fileID: 1582692604370272, guid: a412bb21c43a4d84eb93d434c29ebba1, type: 2}
+  - {fileID: 1120789876235784, guid: edda8f855b0742543ad5fc43879e36fb, type: 2}
+  - {fileID: 1229640741112948, guid: 156fe23a58291314c8cbb6f2df5a6275, type: 2}
   isFallingTrap: 0
 --- !u!212 &212202298347715854
 SpriteRenderer:
