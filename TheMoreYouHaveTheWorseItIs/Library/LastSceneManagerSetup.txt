@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Lv2.unity
+- path: Assets/Lv1.unity
   isLoaded: 1
   isActive: 1
