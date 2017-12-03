@@ -43,6 +43,7 @@ public class TrapZone : MonoBehaviour {
                 if (Time.time - lastTime >= 0.7f)
                 {
                     lastTime = Time.time;
+                    GetComponent<AudioSource>().Play();
                     Vector3 target = GameObject.FindGameObjectWithTag("Player").transform.position;
                     Vector3 dirction = target - transform.position;
                     GameObject fruit = Instantiate(fruits[(int)Random.Range(0, fruits.Length)], transform.parent, false);

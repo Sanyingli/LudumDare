@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour {
         else if (foods >= 2)
         {
             stages = 2;
+            foods = 2;
         }
         playerCtrl.CheckStage();
     }
@@ -58,15 +59,19 @@ public class GameManager : MonoBehaviour {
         if (Time.time - lastTime >= 2f && hurtable)
         {
             lastTime = Time.time;
-            hurtable = false;
             health -= 1;
-            Debug.Log("GetHurt() call");
+            GUI.instance.CheckHeart(health);
             if (health <= 0)
             {
                 Debug.Log("game over");
                 //GameOver();
             }
-            StartCoroutine(UnHurtable());
+            else
+            {
+                hurtable = false;
+                Debug.Log("GetHurt() call");
+                StartCoroutine(UnHurtable());
+            }
         }
     }
     IEnumerator UnHurtable()

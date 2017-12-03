@@ -19,6 +19,7 @@ public class TouchToDie : MonoBehaviour {
         if (collision.gameObject.tag == "PlayerStage")
         {
             GameManager.instace.GetHurt();
+            AudioManager.instance.PlayHurts();
         }
     }
 
@@ -27,6 +28,7 @@ public class TouchToDie : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             GameManager.instace.GetHurt();
+            AudioManager.instance.PlayHurts();
         }
     }
 }

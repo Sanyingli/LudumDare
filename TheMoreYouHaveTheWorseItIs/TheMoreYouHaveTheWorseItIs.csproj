@@ -239,9 +239,15 @@
   <ItemGroup>
     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CameraFellow.cs" />
+    <Compile Include="Assets\Scripts\ChangeCameraOffset.cs" />
+    <Compile Include="Assets\Scripts\Effects\HeartLose.cs" />
+    <Compile Include="Assets\Scripts\EnterLvNext.cs" />
     <Compile Include="Assets\Scripts\Foods.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GUI.cs" />
+    <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\Scripts\TouchToDie.cs" />
     <Compile Include="Assets\Scripts\TrapZone.cs" />

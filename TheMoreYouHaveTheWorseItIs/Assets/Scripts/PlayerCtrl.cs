@@ -35,6 +35,7 @@ public class PlayerCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         if(!GameManager.instace.hurtable)
         {
             stages[GameManager.instace.stages].GetComponent<SpriteRenderer>().enabled = !stages[GameManager.instace.stages].GetComponent<SpriteRenderer>().enabled;
@@ -82,6 +83,7 @@ public class PlayerCtrl : MonoBehaviour {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 dir = mousePos - new Vector2(transform.position.x, transform.position.y);
         rg.AddForce(dir * jumpForce);
+        stages[GameManager.instace.stages].GetComponent<AudioSource>().Play();
     }
 
     public void CheckStage()

@@ -24,12 +24,14 @@ public class Foods : MonoBehaviour {
             {
                 GameManager.instace.foods += 1;
                 GameManager.instace.CheckFoods();
+                AudioManager.instance.PlayHurts();
                 Destroy(gameObject);
             }
             else
             {
                 GameManager.instace.foods -= 1;
                 GameManager.instace.CheckFoods();
+                AudioManager.instance.PlayAddCoins();
                 Destroy(gameObject);
             }
         }
